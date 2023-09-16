@@ -1,0 +1,23 @@
+[build]
+  command = "npm run build" # Este comando deve ser o comando para construir sua aplicação web (vite) em produção
+
+# Configuração para a pasta "server"
+[functions]
+  # Define uma função serverless para a pasta "server"
+  # Essa função será executada independentemente do build da "web"
+  # Certifique-se de ajustar os detalhes desta configuração de acordo com suas necessidades
+  directory = "backend" # Indique a pasta onde estão suas funções Lambda (o código do servidor)
+  node_bundler = "esbuild" # Encapsula cada função como um novo projeto gerando independência entre elas
+  external_node_modules = [
+    "@netlify/functions",
+    "cors",
+    "express",
+    "express-async-error",
+    "serverless-http",
+	]
+
+[[redirects]]
+  force = true
+  from = "/api/*"
+  status = 200
+  to = "/.netlify/functions/index"

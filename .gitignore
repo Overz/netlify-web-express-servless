@@ -1,0 +1,8 @@
+# Local Netlify folder
+.netlify
+build
+dist
+temp
+node_modules
+yarn.lock
+package-lock.json
