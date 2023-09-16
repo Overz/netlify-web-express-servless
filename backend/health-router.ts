@@ -6,4 +6,4 @@ router.get('/health', (req: Request, res: Response) => {
 	res.send({ time: new Date() });
 });
 
-export { router as helloRouter };
+export { router as healthRouter };

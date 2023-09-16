@@ -1,5 +1,5 @@
 import { Router } from 'express';
 
-import { helloRouter } from './health-router';
+import { healthRouter } from './health-router';
 
-export const routes: Router[] = [helloRouter];
+export const routes: Router[] = [healthRouter];
