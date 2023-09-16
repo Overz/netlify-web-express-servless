@@ -75,7 +75,8 @@
 			var local_api = 'http://localhost:3000/api/health';
 			var local_api_netlify =
 				'http://localhost:8888/.netlify/functions/index/health';
-			var cloud_netlify = '';
+			var cloud_netlify =
+				'https://6505108408aa414fdc900b84--voluble-cannoli-7e804a.netlify.app/.netlify/functions/index/health';
 
 			async function test(url) {
 				const resp = await fetch(url, { method: 'GET' });
